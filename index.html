@@ -14,6 +14,30 @@
       color: #333;
     }
 
+        nav {
+      background-color: #1a73e8;
+      display: flex;
+      justify-content: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 15px 25px;
+      font-weight: 500;
+      font-size: 1.1em;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background-color: #155bb5;
+    }
+    
     .container {
       max-width: 900px;
       margin: 0 auto;
@@ -63,6 +87,9 @@
   </style>
 </head>
 <body>
+  <nav>
+    <a href="research.html" class="active">Research Interests</a>
+  </nav>
   <div class="container">
     <header>
       <h1>Nash Ward</h1>
