@@ -22,6 +22,7 @@
       top: 0;
       z-index: 1000;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      flex-wrap: wrap;
     }
 
     nav a {
@@ -31,6 +32,7 @@
       font-weight: 500;
       font-size: 1.1em;
       transition: background-color 0.3s ease;
+      white-space: nowrap;
     }
 
     nav a:hover,
@@ -38,10 +40,13 @@
       background-color: #155bb5;
     }
 
+  
     .container {
       max-width: 900px;
+      width: 100%;
       margin: 0 auto;
       padding: 40px 20px;
+      box-sizing: border-box;
     }
 
     header {
@@ -50,7 +55,8 @@
     }
 
     header img {
-      width: 500px;
+      max-width: 100%;
+      height: auto;
       border-radius: 8px;
       margin-top: 10px;
     }
