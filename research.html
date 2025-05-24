@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nash Ward | Applied Math PhD</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
-  <style>
+ <style>
     body {
       font-family: 'Roboto', sans-serif;
       margin: 0;
@@ -23,6 +23,7 @@
       top: 0;
       z-index: 1000;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      flex-wrap: wrap;
     }
 
     nav a {
@@ -32,6 +33,7 @@
       font-weight: 500;
       font-size: 1.1em;
       transition: background-color 0.3s ease;
+      white-space: nowrap;
     }
 
     nav a:hover,
@@ -39,10 +41,13 @@
       background-color: #155bb5;
     }
 
+  
     .container {
       max-width: 900px;
+      width: 100%;
       margin: 0 auto;
       padding: 40px 20px;
+      box-sizing: border-box;
     }
 
     header {
@@ -51,7 +56,8 @@
     }
 
     header img {
-      width: 500px;
+      max-width: 100%;
+      height: auto;
       border-radius: 8px;
       margin-top: 10px;
     }
