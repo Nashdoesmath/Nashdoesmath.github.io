@@ -7,74 +7,83 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background-color: #f4f4f4;
-    }
-
-    .container {
-      max-width: 960px;
-      margin: auto;
-      padding: 20px;
-    }
-
-    h1 {
-      text-align: center;
-      margin-top: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
     }
 
     nav {
-      background-color: #1a73e8;
+      background-color: #1f1f1f;
       display: flex;
       justify-content: center;
+      padding: 0.5em 0;
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      border-bottom: 1px solid #333;
     }
 
     nav a {
-      color: white;
+      color: #e0e0e0;
       text-decoration: none;
-      padding: 15px 25px;
+      padding: 14px 24px;
       font-weight: 500;
       font-size: 1.1em;
-      transition: background-color 0.3s ease;
+      transition: all 0.3s ease;
     }
 
     nav a:hover,
     nav a.active {
-      background-color: #155bb5;
+      background-color: #333;
+      border-radius: 6px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 40px;
+      font-weight: 400;
+      color: #ffffff;
     }
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
-      padding: 20px 0;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
     }
 
     .gallery img {
       width: 100%;
       height: auto;
-      display: block;
       object-fit: cover;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
     }
 
     @media (max-width: 600px) {
-      .container {
-        padding: 10px;
+      nav a {
+        padding: 10px 16px;
+        font-size: 1em;
       }
 
       h1 {
-        font-size: 1.8em;
+        font-size: 2em;
       }
 
-      nav a {
-        padding: 10px 15px;
-        font-size: 1em;
+      .container {
+        padding: 20px 10px;
       }
     }
   </style>
@@ -91,12 +100,12 @@
   <div class="container">
     <h1>Nash Ward</h1>
     <div class="gallery">
-      <img src="photos/Arctic_train.jpg" alt="Missing" />
-      <img src="photos/old_dock.jpg" alt="Missing" />
-      <img src="photos/Basilisk.jpg" alt="Missing" />
-      <img src="photos/bear_tracks.jpg" alt="Missing" />
-      <img src="photos/iceblock.jpg" alt="Missing" />
-      <img src="photos/Osprey_nest_1.jpg" alt="Missing" />
+      <img src="photos/Arctic_train.jpg" alt="Arctic Train" />
+      <img src="photos/old_dock.jpg" alt="Old Dock" />
+      <img src="photos/Basilisk.jpg" alt="Basilisk" />
+      <img src="photos/bear_tracks.jpg" alt="Bear Tracks" />
+      <img src="photos/iceblock.jpg" alt="Ice Block" />
+      <img src="photos/Osprey_nest_1.jpg" alt="Osprey Nest" />
       <!-- Add more photos as needed -->
     </div>
   </div>
