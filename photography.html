@@ -7,83 +7,82 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Helvetica Neue', sans-serif;
-      background-color: #121212;
-      color: #e0e0e0;
-    }
-
-    nav {
-      background-color: #1f1f1f;
-      display: flex;
-      justify-content: center;
-      padding: 0.5em 0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      border-bottom: 1px solid #333;
-    }
-
-    nav a {
-      color: #e0e0e0;
-      text-decoration: none;
-      padding: 14px 24px;
-      font-weight: 500;
-      font-size: 1.1em;
-      transition: all 0.3s ease;
-    }
-
-    nav a:hover,
-    nav a.active {
-      background-color: #333;
-      border-radius: 6px;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
     }
 
     .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
     }
 
     h1 {
       text-align: center;
-      font-size: 2.5em;
+      margin-top: 0;
+    }
+
+    nav {
+      background-color: #1a73e8;
+      display: flex;
+      justify-content: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 15px 25px;
+      font-weight: 500;
+      font-size: 1.1em;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background-color: #155bb5;
+    }
+
+    .photo-entry {
       margin-bottom: 40px;
-      font-weight: 400;
-      color: #ffffff;
     }
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-
-    .gallery img {
+    .photo-entry img {
       width: 100%;
       height: auto;
-      object-fit: cover;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     }
 
-    .gallery img:hover {
-      transform: scale(1.03);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+    .caption {
+      margin-top: 10px;
+      font-size: 1em;
+      color: #555;
+      text-align: center;
     }
 
     @media (max-width: 600px) {
-      nav a {
-        padding: 10px 16px;
-        font-size: 1em;
+      .container {
+        padding: 10px;
       }
 
       h1 {
-        font-size: 2em;
+        font-size: 1.8em;
       }
 
-      .container {
-        padding: 20px 10px;
+      nav a {
+        padding: 10px 15px;
+        font-size: 1em;
+      }
+
+      .caption {
+        font-size: 0.95em;
       }
     }
   </style>
@@ -99,15 +98,37 @@
 
   <div class="container">
     <h1>Nash Ward</h1>
-    <div class="gallery">
-      <img src="photos/Arctic_train.jpg" alt="Arctic Train" />
-      <img src="photos/old_dock.jpg" alt="Old Dock" />
-      <img src="photos/Basilisk.jpg" alt="Basilisk" />
-      <img src="photos/bear_tracks.jpg" alt="Bear Tracks" />
-      <img src="photos/iceblock.jpg" alt="Ice Block" />
-      <img src="photos/Osprey_nest_1.jpg" alt="Osprey Nest" />
-      <!-- Add more photos as needed -->
+
+    <div class="photo-entry">
+      <img src="photos/Arctic_train.jpg" alt="Arctic train" />
+      <div class="caption">A freight train pushes through the Arctic Circle during golden hour in late fall.</div>
     </div>
+
+    <div class="photo-entry">
+      <img src="photos/old_dock.jpg" alt="Old dock" />
+      <div class="caption">An abandoned dock slowly decays on a misty morning in the San Juan Islands.</div>
+    </div>
+
+    <div class="photo-entry">
+      <img src="photos/Basilisk.jpg" alt="Basilisk" />
+      <div class="caption">A green basilisk lizard peers through the foliage in Costa Rica.</div>
+    </div>
+
+    <div class="photo-entry">
+      <img src="photos/bear_tracks.jpg" alt="Bear tracks" />
+      <div class="caption">Fresh bear tracks in the sand near a coastal river mouth in Alaska.</div>
+    </div>
+
+    <div class="photo-entry">
+      <img src="photos/iceblock.jpg" alt="Ice block" />
+      <div class="caption">A solitary ice block sits on a black sand beach in southern Iceland.</div>
+    </div>
+
+    <div class="photo-entry">
+      <img src="photos/Osprey_nest_1.jpg" alt="Osprey nest" />
+      <div class="caption">Ospreys tending to their nest atop a broken piling in the Puget Sound.</div>
+    </div>
+
   </div>
 </body>
 </html>
