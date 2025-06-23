@@ -93,11 +93,12 @@
 
     .banner img {
   width: 100%;
-  height: auto;
+  height: 250px;         /* fixed banner height */
+  object-fit: cover;     /* crop the sides */
+  object-position: center center; /* focus on center */
   display: block;
-  max-height: 300px;
-  object-fit: cover;
 }
+
 .banner {
   width: 100%;
   overflow: hidden;
